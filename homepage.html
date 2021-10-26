@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://translate.google.co.in/favicon.ico">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div id="inputLang">
+        <div>
+            <label for="lang">Translate From : </label>
+            <select name="lang" id="searchLang">
+                <option value="auto" selected>Auto Detect</option>
+            </select>
+        </div>
+        <div>
+            <label for="lang">Translate To : </label>
+            <select name="lang" id="resultLang"></select>
+        </div>
+    </div>
+    <div id="mainBox">
+        <div id="inputB">
+            <textarea class="text" id="input" placeholder="Translate" cols="30" rows="10"></textarea>
+        </div>
+        <div id="outputB">
+            <textarea class="text" id="output" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+    <div id="btnBox">
+        <div id="imgB"><img src="https://img.icons8.com/windows/32/000000/microphone--v2.png"/></div>
+        <button id="convertBtn">Translate</button>
+        <button>Speak Out</button>
+    </div>
+</body>
+</html>
+<script type="module">
+    import {getLang, appendLang} from "/scripts/options.js"
+    getLang();
+
+    import {translate} from "/scripts/translation.js"
+
+    let convertBtn = document.getElementById("convertBtn");
+    convertBtn.addEventListener("click", translate);
+</script>
