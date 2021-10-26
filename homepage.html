@@ -33,7 +33,7 @@
         </div>
     </div>
     <div id="btnBox">
-        <div id="imgB"><img src="https://img.icons8.com/windows/32/000000/microphone--v2.png"/></div>
+        <div id="imgB"><img onclick="showAudio()" src="https://img.icons8.com/windows/32/000000/microphone--v2.png"/></div>
         <button id="convertBtn">Translate</button>
         <button>Speak Out</button>
     </div>
@@ -48,3 +48,4 @@
     let convertBtn = document.getElementById("convertBtn");
     convertBtn.addEventListener("click", translate);
 </script>
+<script src="/scripts/speechReco.js"></script>
