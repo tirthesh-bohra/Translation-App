@@ -43,7 +43,7 @@
     import {getLang, appendLang} from "/scripts/options.js"
     getLang();
 
-    import {translate} from "/scripts/translation.js"
+    import {translate, detectLang} from "/scripts/translation.js"
 
     let convertBtn = document.getElementById("convertBtn");
     convertBtn.addEventListener("click", translate);
