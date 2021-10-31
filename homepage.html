@@ -35,7 +35,13 @@
     <div id="btnBox">
         <div id="imgB"><img onclick="showAudio()" src="https://img.icons8.com/windows/32/000000/microphone--v2.png"/></div>
         <button id="convertBtn">Translate</button>
-        <button>Speak Out</button>
+        <button id="speak">Speak Out</button>
+    </div>
+    <div id="voices">
+        <label for="lang">Select Voices : </label>
+        <select id="getVoices">
+            <option value="auto" selected>Default</option>
+        </select>
     </div>
 </body>
 </html>
@@ -49,3 +55,4 @@
     convertBtn.addEventListener("click", translate);
 </script>
 <script src="/scripts/speechReco.js"></script>
+<script src="/scripts/speechSynthesis.js"></script>

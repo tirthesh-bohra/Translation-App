@@ -70,3 +70,11 @@ button {
 #imgB {
     cursor: pointer;
 }
+#voices {
+    width: 20%;
+    margin: auto;
+    margin-top: 2vh;
+}
+label {
+    font-size: 2vh;
+}
